@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WonderfulGames.Pages.Shared.Site" ViewStateMode="Disabled" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>WonderfulGames</title>
+    <link href="~/WG-Style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="container">
+        <%-- Header--%>
+        <h1 id="title">Wonderful Games</h1>
+
+        <%-- Länkar--%>
+        <div id="nav">
+            <ul>
+                <li>
+                    <asp:HyperLink ID="HyperLink1" runat="server" Text="Spellista" NavigateUrl="<%$ RouteUrl:routename=GameList %>" />
+                </li>
+                <li>
+                    <asp:HyperLink ID="HyperLink2" runat="server" Text="Lägg till spel" NavigateUrl="<%$ RouteUrl:routename=GameCreate %>" />
+                </li>
+                <li>
+                    <asp:HyperLink ID="HyperLink3" runat="server" Text="Utvecklare" NavigateUrl="<%$ RouteUrl:routename=DeveloperList %>" />
+                </li>
+            </ul>
+        </div>
+
+        <%-- Rättmeddelanden--%>
+        <asp:Panel runat="server" ID="SuccessMessagePanel" Visible="false">
+            <asp:Literal runat="server" ID="SuccessMessageLiteral" />
+        </asp:Panel>
+
+        <%-- Divtag som omfamnar content--%>
+        <div id="main">
+            <asp:ContentPlaceHolder ID="headplaceholder" runat="server"></asp:ContentPlaceHolder>
+            <form id="form1" runat="server">
+
+                <asp:ContentPlaceHolder ID="mainplaceholder" runat="server">
+                </asp:ContentPlaceHolder>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

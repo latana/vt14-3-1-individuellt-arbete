@@ -12,11 +12,13 @@ namespace WonderfulGames.App_Start
     public class RouteConfig
     {
         /// <summary>
-        /// Ser till att url'en 
+        /// Ser till att url'en inte heter sitt filnamn
         /// </summary>
         /// <param name="routes"></param>
         public static void RegisterRoutes(RouteCollection routes)
         {
+            routes.MapPageRoute("Default", "", "~/Pages/GamePages/GameList.aspx");
+
             routes.MapPageRoute("GameList", "spel", "~/Pages/GamePages/GameList.aspx");
             routes.MapPageRoute("GameCreate", "spel/ny", "~/Pages/GamePages/GameCreate.aspx");
             routes.MapPageRoute("GameDetails", "spel/{id}", "~/Pages/GamePages/GameDetails.aspx");

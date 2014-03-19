@@ -27,7 +27,7 @@
         <ItemTemplate>
             <dl>
                 <dt><%-- Länkar med spel som lopas fram --%>
-                    <asp:HyperLink ID="HyperLink1" Class="game" runat="server" NavigateUrl='<%# GetRouteUrl("GameDetails", new { id = Item.GameID })  %>' Text='<%# Item.Title %>' />
+                    <asp:HyperLink ID="HyperLink1" class="game" runat="server" NavigateUrl='<%# GetRouteUrl("GameDetails", new { id = Item.GameID })  %>' Text='<%# Item.Title %>' />
                 </dt>
             </dl>
         </ItemTemplate>

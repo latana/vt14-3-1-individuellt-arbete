@@ -70,6 +70,7 @@
     <Content Include="packages.config" />
     <Content Include="WG-Style.css" />
     <None Include="Properties\PublishProfiles\WonderfulGames.pubxml" />
+    <None Include="Properties\PublishProfiles\Wonderful_Games.pubxml" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.0.js" />
     <Content Include="Scripts\jquery-2.1.0.min.js" />
